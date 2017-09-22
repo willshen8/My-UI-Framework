@@ -1,0 +1,13 @@
+/* Avatar.css */
+
+.avatar{
+	height:250px;
+	width: 250px;
+	border-radius: 50%;
+}
+
+.avatar-small{
+	height:100px;
+	width: 100px;
+	border-radius: 50%;
+}

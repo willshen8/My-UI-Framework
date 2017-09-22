@@ -1,0 +1,62 @@
+.banner {
+	width: auto;
+	height: auto;	
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	background-size: cover;
+	background: -webkit-linear-gradient(right, #0691ad, #0bc4e9);
+	background: -o-linear-gradient(right, #0691ad, #0bc4e9);
+	background: linear-gradient(to left, #0691ad, #0bc4e9);
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+  	justify-content: center;
+}
+
+.banner > h1{
+	flex: 5;
+	color: #fff;
+	font-size: 5rem;
+	padding-top: 50px;
+	justify-content: space-around;
+}
+
+.banner > p{
+	margin: none;
+	flex: 1;
+	font-size: 1.2rem;
+	color: #fff;	
+}
+
+.banner > button{
+	vertical-align: middle;
+	flex: 2;
+	border: none;
+	margin-bottom: 30px;
+}
+
+/*.banner > .banner-contents{
+	flex: 3;
+	padding: 20px;
+}
+
+.banner > .banner-contents h1{
+	color: #fff;
+	font-size: 5rem;
+	margin-top: 50px;
+	justify-content: space-around;
+}
+
+.banner > .banner-contents p{
+	font-size: 1.2rem;
+	color: #fff;	
+}
+
+.banner > .banner-contents button{
+	flex: 1;
+	border: none;
+	bottom: 50px;
+}*/

@@ -1,0 +1,35 @@
+/* Table */
+table {
+  background-color: transparent;
+}
+
+.table{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+th {
+  text-align: left;
+}
+.table > thead > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > td{
+	padding: 10px 10px 10px 10px;
+	line-height: 1.5;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+.table > tfoot > tr > td {
+  vertical-align: bottom;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
