@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Test</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/syntax-highlight/school-book.css">
+  <style type="text/css">
+    @font-face {
+      font-family:"Lato";
+      src: url("/fonts/roboto.ttf") /* TTF file for CSS3 browsers */
+    }
+  </style>
+  <link rel="stylesheet" href="css/syntax-highlight/default.css">
+  <script src="scripts/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+</head>
+
+<body>
+  <div class="dropdown"> City
+    <ul class="dropdown-menu">
+      <li><a href="http://www.nba.com">Shanghai</a></li>
+      <li><a href="http://www.google.com">Tokyo</a></li>
+      <li><a href="http://www.youtube.com">Melbourne</a></li>
+    </ul>
+  </div>
+
+  <pre><code class="language-html">
+     &lt;input type="button" class="button button-blue" value="General&gt;
+   </code></pre>
+</body>
+
+<script>
+  $('.dropdown').on('click', function(e){
+     $(this).toggleClass('open');
+     e.stopPropagation();
+    });
+
+    $('.dropdown.dropdown-menu li a').on('click', function(e){
+       $(this).toggleClass('open');
+       e.stopPropagation();
+      });
+
+/* Upon a mouseup event, if the clicked element is not dropdown,
+then remove the open class to close the dropdown menu */
+    $(document).on('mouseup', function(e){
+      var eleNotFound = false;
+      if($(e.target).attr("class") !== "dropdown")
+      {
+          eleNotFound = true;
+         $(".dropdown-menu").each(function(){
+           $(this).parent().removeClass('open');
+         });
+      }
+       if(eleNotFound)
+         e.preventDefault();
+    });
+</script>
+
+</html>

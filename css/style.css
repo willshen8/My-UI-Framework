@@ -1,4 +1,4 @@
-/* 
+/*
  * Author: Will Shen
  * Date: Aug 2017
  * Description: UI CSS framework for my web deveopment projects
@@ -85,7 +85,7 @@ strong, b{
 medium {
 	font-size: 90%;
 	line-height: inherit;
-}	
+}
 
 small {
 	font-size: 80%;
@@ -112,39 +112,54 @@ small {
 
 /* Colors*/
 .red {
-     background-color: #ea4335;   
+     background-color: #ea4335;
  }
 
  .blue {
-    background-color: #2185d0; 
+    background-color: #2185d0;
  }
 
  .green {
-    background-color: #4CAF50;  
+    background-color: #4CAF50;
+ }
+
+ p {
+	 font-weight: 300;
  }
 
 .grid-container{
 	display: grid;
 	grid-template-columns: 200px auto 200px;
-	grid-template-rows: auto auto auto auto;
+	grid-template-rows: 80px auto auto 100px;
 	grid-template-areas:
-		 "header header header"
+		 "sidebar header header"
 		 "sidebar main main"
 		 "sidebar main main"
-		 "footer footer footer";
-	background: #fcfcfc;	 
+		 "sidebar footer footer";
+	background: #fcfcfc;
 }
 
 /* grid-row-start, grid-column-start, grid-row-end, grid-column-end */
 .grid-container .sidebar{
-	grid-area: 2/1/5/2;
-	background: #ffffff;
-	border-right-style: solid 2px;
+	grid-area: 1/1/5/2;
+	background: #0099cc;
+	color: #fff;
+}
+
+.grid-container .sidebar > .brand{
+	display: block;
+	font-size: 2rem;
+	font-weight: 500;
+	color: #fff;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+	text-align: center;
 }
 
 .grid-container > .sidebar ul{
 	margin: 0;
-    padding: 0;	
+    padding: 0;
 	list-style-type: none;
 }
 
@@ -152,17 +167,17 @@ small {
 	display: block;
 	font-size: 17px;
 	font-weight: 300;
-	padding: 20px 0 20px 40px;
+	padding: 15px 0 15px 40px;
 }
 
 .grid-container > .sidebar > ul li:hover{
+	color: #000;
 	cursor: pointer;
 }
 
 .grid-container > .sidebar > ul li:active{
-	font-size: 18px;
+	font-size: 17px;
 	font-weight: 500;
-	padding-top: 10px;
 }
 
 .grid-container > .sidebar > ul li:hover{
@@ -172,19 +187,28 @@ small {
 	font-weight: 800;
 }
 
+.grid-container > .sidebar > ul li a{
+	display: block;
+	width: inherit;
+	text-decoration: none;
+	color: inherit;
+	font-weight: inherit;
+}
+
 .grid-container .sidebar > h2{
 	font-size: 1.5rem;
 	font-weight: 300;
-	padding-top: 30px;
 }
 
 .grid-container .header{
 	display: flex;
 	flex-direction: row;
+	background: #f2f2f2;
 	max-height: 50px;
-	grid-area: 1/1/2/4;
-	background: #0099cc;
+	grid-area: 1/2/2/4;
+	background: #fff;
 	padding: 20px 20px;
+	border-bottom: 1px solid rgba(34,36,38,.1);
 }
 
 .grid-container .header > .brand{
@@ -192,7 +216,7 @@ small {
 	display: block;
 	font-size: 2rem;
 	font-weight: 500;
-	color: #fff;
+	/*color: #fff;*/
 	width: 500px;
 	height: auto;
 	vertical-align: middle;
@@ -227,17 +251,19 @@ small {
 	font-weight: 300;
 	text-align: center;
 	padding: 10px;
-	color: #fff;
-}
-
-.grid-container .header .nav ul li a{
-	text-decoration: none;
-	color: #fff;
 }
 
 .grid-container .header .nav ul li:not(:first-child){
-	border-left: 1px solid #fff;
+	border-left: 1px solid rgba(34,36,38,.1);
 }
+
+.grid-container .header .nav ul li a{
+	display: block;
+	width: inherit;
+	text-decoration: none;
+	color: #000;
+}
+
 
 .grid-container .header .search {
 	flex: 1;
@@ -248,7 +274,7 @@ small {
 	flex: 0.2;
 	text-align: center;
 	padding: 10px;
-	color: #fff;
+	color: #000;
 	height: 12px;
 }
 
@@ -258,17 +284,14 @@ small {
 }
 
 .header-title{
-    font-weight: 300;
+  font-weight: 300;
 	font-size: 2.0rem;
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .grid-container >.main {
 	grid-area: 2/2/4/4;
-	background: #fcfcfc;
-	margin-left: 2rem;
-	margin-right: 2rem;
-	padding: 20px 0 20px 0;
+	margin: 0 20px;
 }
 
 .grid-container .main > .caption {
@@ -276,13 +299,44 @@ small {
 	font-weight: 300;
 }
 
+.grid-container .main .component{
+	padding: 20px;
+}
+
+.grid-container .main .component .explanation p{
+	font-weight: 300;
+}
+
+.grid-container .main .component > .title{
+	font-size: 3.5rem;
+	font-weight: 300;
+	color: #0099cc;
+}
+
+.grid-container .main .example > .heading{
+	font-size: 2.0rem;
+	font-weight: 300;
+	color: #0099cc;
+	padding-top: 30px;
+}
+
+.grid-container .main .example .topic > p{
+	font-weight: 300 !important;
+}
+
+.grid-container .main .example .showcase{
+	display: flex;
+	flex-direction: row;
+}
+
 .grid-container .footer{
-	color: #ffffff;
 	font-size: 0.75rem;
-	grid-area: 4/1/5/4;
-	background: #0099cc;
-	padding: 2% 0 2% 5%;
+	grid-area: 4/2/5/4;
+	height: auto;
+	background: #fff;
+	padding: 20px 20px;
 	margin-top: 20px;
+	border-top: 1px solid rgba(34,36,38,.1);
 }
 
 @media screen and (max-width: 480px) and (min-width: 320px) {
@@ -317,6 +371,5 @@ small {
 	.grid-container .footer{
 		grid-area: 4/1/5/2;
 		background: orange;
-	}	
+	}
 }
-

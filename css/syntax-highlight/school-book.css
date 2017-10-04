@@ -27,7 +27,7 @@ pre{
 
 .hljs,
 .hljs-subst {
-  color: #3e5915;
+  color: #3e5915 !important;
 }
 
 .hljs-string,

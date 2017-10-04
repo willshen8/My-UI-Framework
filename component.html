@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <title> My UI Framework</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <style type="text/css">
+      @font-face {
+      font-family:"Lato";
+      src: url("/fonts/roboto.ttf") /* TTF file for CSS3 browsers */
+      }
+    </style>
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+
+  <body>
+  <div class="grid-container">
+    <div class="sidebar">
+      <h2 class="text-center"> UI Component </h2>
+      <ul>
+        <li>Avatar</li>
+        <li>Buttons</li>
+        <li>Table</li>
+        <li>Dropdown</li>
+        <li>Navbar</li>
+        <li>Cards</li>
+        <li>Badges</li>
+        <li>Banner</li>
+        <li>Tabs</li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="brand"> Logo</div>
+      <div class="nav">
+        <ul>
+          <li> <a href="#">Home</a> </li>
+          <li> <a href="#">UI Components</a></li>
+          <li> <a href="#">Contacts</a> </li>
+        </ul>
+      </div>
+      <div class="search">
+        <div class="input-box">
+          <input type="search" name="search" placeholder="Search...">
+          <i><span class="fa fa-search"> </span></i>
+        </div>
+      </div>
+      <div class="user"><a href="#"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a></div>
+    </div>
+
+     <!-- Main -->
+    <div class="main">
+      <div class="header-title"> Input box </div>
+        <p class="caption">
+          A standard input box with a label.
+        </p>
+
+        <div class="input">
+          <div class="input-label"> First Name</div>
+          <div class="input-box">
+            <input type="text" name="search" placeholder="First Name">
+          </div>
+        </div>
+
+      <div class="header-title"> Search box </div>
+        <p class="caption">
+          A search box with search icon.
+        </p>
+     <div class="input-box">
+          <input type="search" name="search" placeholder="Search...">
+          <i><span class="fa fa-search"> </span></i>
+      </div>
+
+     <div class="header-title"> Dropdown </div>
+        <p class="caption">
+          A dropdown list.
+        </p>
+
+          <div id="dd" class="dropdown"> City
+            <ul class="dropdown-menu">
+              <li><a href="#">Shanghai</a></li>
+              <li><a href="#">Tokyo</a></li>
+              <li><a href="#">Melbourne</a></li>
+            </ul>
+          </div>
+<br>
+  <!--     <div class="dropdown">
+       <button class="button dropdown-button blue"> Menu <i class="fa fa-angle-down lg" aria-hidden="true"></i> </button>
+      <div class="dropdown-menu">
+        <div class="item"><a href="#">New</a> </div>
+        <div class="item"><a href="#">Save</a></div>
+        <div class="item"><a href="#">Print</a></div>
+        <hr>
+        <div class="item"><a href="#">Close</a></div>
+      </div>
+      </div> -->
+
+     <div class="header-title"> Input Selector</div>
+        <p class="caption">
+          Input selector is a great alternative to drop down as it has all the option listed, therefore requires one less click.
+
+      <div class="button-group">
+         <input type="button" href="#" class="inline-button" value="VIC">
+         <input type="button" href="#" class="inline-button" value="NSW">
+        <input type="button" class="inline-button" value="SA">
+        <input type="button" class="inline-button" value="WA">
+      </div>
+
+    <div class="header-title"> Input with label</div>
+        <p class="caption">
+          An input can have a label to improve the clarity of the field.
+        </p>
+
+        <div class="labelled-input">
+          <input class="rect-input" type="text" name="search" placeholder="Height">
+          <div class="label"> cm</div>
+        </div>
+
+    </div> <!-- end of Main -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <p> Copyright © 2017-present </p>
+    </div>
+  </div> <!-- end of Grid -->
+  </body>
+</html>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.dropdown').removeClass('active');
+        });
+
+      });
+
+    </script>
+
+
+
+
+
+
+
+
+
+</script>
