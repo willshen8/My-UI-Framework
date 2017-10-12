@@ -19,8 +19,18 @@
         </ul>
       </div> <!-- end of dropdown nav-->
 
-    <pre class="line-numbers"><code class="language-html">
-       &lt;input type="button" class="button button-blue" value="General&gt;
+    <pre class="line-numbers"><code class="html">
+      &lt;div class="dropdown-nav"&gt;
+        &lt;button class="button dropdown-button blue"&gt; Menu
+          &lt;i class="fa fa-angle-down lg" aria-hidden="true"&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        &lt;ul class="dropdown-menu"&gt;
+          &lt;li class="item"&gt;&lt;a href="#"&gt;New&lt;/a&gt; &lt;/li&gt;
+          &lt;li class="item"&gt;&lt;a href="#"&gt;Save&lt;/a&gt;&lt;/li&gt;
+        &lt;hr&gt;
+          &lt;li class="item"&gt;&lt;a href="#"&gt;Close&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
     </code></pre>
   <div class="code"> </div>
 
@@ -35,9 +45,19 @@
     </ul>
   </div>
   <div class="code">
-    <pre class="line-numbers"><code class="language-css">
-       &lt;input type="button" class="button button-blue" value="General&gt;
+    <pre class="line-numbers"><code class="html">
+      &lt;div class="dropdown"&gt; Favourite Site
+        &lt;ul class="dropdown-menu"&gt;
+          &lt;li&gt;&lt;a href="http://wwww.google.com"&gt;Google&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="http://www.youtube.com"&gt;Youtube&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="http://www.nba.com"&gt;NBA&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
     </code></pre>
   </div>
-
 </section>
+<script>
+$(document).ready(function() {
+   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>

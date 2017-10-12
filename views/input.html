@@ -14,7 +14,12 @@
       </div>
       <div class="code">
         <pre class="line-numbers"><code class="markdown">
-           &lt;input type="button" class="button button-blue" value="General&gt;
+          &lt;div class="search"&gt;
+            &lt;div class="input-box"&gt;
+              &lt;input type="search" name="search" placeholder="Search..."&gt;
+              &lt;i&gt;&lt;span class="fa fa-search"&gt; &lt;/span&gt;&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
         </code></pre>
       </div>
 
@@ -27,24 +32,34 @@
           </div>
         </div>
         <div class="code">
-          <pre class="line-numbers"><code class="language-css">
-             &lt;input type="button" class="button button-blue" value="General&gt;
+          <pre class="line-numbers"><code class="html">
+            &lt;div class="input"&gt;
+              &lt;div class="input-label"&gt; First Name&lt;/div&gt;
+              &lt;div class="input-box"&gt;
+                &lt;input type="text" name="search" placeholder="First Name"&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
           </code></pre>
         </div>
 
-          <div class="heading"> Input Selector</div>
-            <p>Input selector is a great alternative to drop down as it has all
+          <div class="heading"> Button Group</div>
+            <p>Button group is a great alternative to drop down as it has all
               the option listed, therefore requires one less click.
             </p>
             <div class="button-group">
-               <input type="button" href="#" class="inline-button" value="VIC">
-               <input type="button" href="#" class="inline-button" value="NSW">
+              <input type="button" class="inline-button" value="VIC">
+              <input type="button" class="inline-button" value="NSW">
               <input type="button" class="inline-button" value="SA">
               <input type="button" class="inline-button" value="WA">
             </div>
             <div class="code">
-              <pre class="line-numbers"><code class="language-css">
-                 &lt;input type="button" class="button button-blue" value="General&gt;
+              <pre class="line-numbers"><code class="html">
+                &lt;div class="button-group"&gt;
+                  &lt;input type="button" class="inline-button" value="VIC"&gt;
+                  &lt;input type="button" class="inline-button" value="NSW"&gt;
+                  &lt;input type="button" class="inline-button" value="SA"&gt;
+                  &lt;input type="button" class="inline-button" value="WA"&gt;
+                &lt;/div&gt;
               </code></pre>
             </div>
 
@@ -56,9 +71,17 @@
                 <div class="label"> cm</div>
               </div>
               <div class="code">
-                <pre class="line-numbers"><code class="language-css">
-                   &lt;input type="button" class="button button-blue" value="General&gt;
+                <pre class="line-numbers"><code class="html">
+                  &lt;div class="labelled-input"&gt;
+                    &lt;input class="rect-input" type="text" name="search" placeholder="Height"&gt;
+                    &lt;div class="label"&gt; cm&lt;/div&gt;
+                  &lt;/div&gt;
                 </code></pre>
               </div>
-
 </section>
+
+<script>
+$(document).ready(function() {
+   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>

@@ -7,10 +7,22 @@
     <div class="heading"> Big Avatar </div>
     <p>Big avatar can be used as profile pictures, product catalogue and so on. </p>
       <a href="#"><img class="avatar" src="http://via.placeholder.com/300x300"></a>
+
+      <pre class="line-numbers"><code class="html">
+        &lt;div class="avartar"&gt;
+      </code></pre>
     <div class="heading"> Small Avatar</div>
       <p>Small avatar can be used when a large number of profiles are shown together. </p>
       <a href="#"><img class="avatar-small" src="http://via.placeholder.com/100x100"></a>
     </div>
+    <pre class="line-numbers"><code class="html">
+      &lt;div class="avatar-small"&gt;
+    </code></pre>
   </div>
-  <div class="code"> </div>
+
 </section>
+<script>
+$(document).ready(function() {
+   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>

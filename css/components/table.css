@@ -6,30 +6,60 @@ table {
 .table{
 	width: 100%;
 	margin-bottom: 20px;
+  border-collapse: collapse;
 }
 
 th {
-  text-align: left;
+  text-align: center;
+  color: #fff;
 }
+
 .table > thead > tr > th,
 .table > tbody > tr > td,
 .table > tfoot > tr > td{
-	padding: 10px 10px 10px 10px;
+  font-size: 1.0rem;
+  font-weight: 300;
+	padding: 10px;
 	line-height: 1.5;
 	vertical-align: top;
-	border-top: 1px solid #ddd;
-	border-left: 1px solid #ddd;
+}
+
+.table > thead > tr > th {
+  font-size: 1.2rem;
 }
 
 .table > tfoot > tr > td {
   vertical-align: bottom;
+}
+
+/* Implementation of different styles */
+
+/* Striped gives alternate rows different colors*/
+.striped tr:nth-child(odd){
+  background-color: #f2f2f2;
+}
+
+.divider th, td{
   border-bottom: 1px solid #ddd;
 }
 
+.normal-header th{
+  color: #000;
+  border-bottom: 1px solid #ddd;
+}
 
+.blue-header th{
+    background: #0099cc;
+}
 
+.red-header th{
+    background: #ea4335;
+}
 
+.green-header th{
+    background: #4CAF50;
+}
 
+.bordered {
 
-
-
+}

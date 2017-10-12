@@ -33,14 +33,35 @@
         </div>
       </div> <!-- end of Flexcards -->
 
-    <pre><code class="css">
-       <p>&lt;input type="button" class="button button-blue" value="General&gt;</p>
+    <pre><code class="html">
+      &lt;div class="flex-cards"&gt;
+        &lt;div class="image"&gt;
+          &lt;img src="img/cards-300x300.png"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="content"&gt;
+          &lt;a class="title"&gt; Your title goes here &lt;/a&gt;
+          &lt;div class="subtitle"&gt;
+            &lt;span class=""&gt; Your subtitle &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class="description"&gt;
+          &lt;!-- Enter your description --&gt;
+          &lt;/div&gt;
+        &lt;/div&gt; &lt;
+
+        &lt;div class="icons"&gt;
+          &lt;i class="fa fa-facebook-official fa-2x" aria-hidden="true"&gt;&lt;/i&gt;
+          &lt;i class="fa fa-linkedin fa-2x linkedin" aria-hidden="true"&gt;&lt;/i&gt;
+          &lt;i class="fa fa-twitter fa-2x" aria-hidden="true"&gt;&lt;/i&gt;
+          &lt;input type="button" class="button button-ghost profile" value="Profile"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     </code></pre>
   <div class="code"> </div>
 
 
 <div class="heading"> Contact Cards </div>
-  <p> By removing the image component, it simply becomes a business card.
+  <p> By removing the image div, it simply becomes a business card.
     There is no adjustments needed, as it's done using flex-box.</p>
     <div class="flex-cards">
       <div class="content">
@@ -125,3 +146,9 @@
   </div> <!--end of grid -->
 </div> <!--end of example div -->
 </section>
+<script>
+
+$(document).ready(function() {
+   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>

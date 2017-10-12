@@ -4,41 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> My UI Framework</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/syntax-highlight/school-book.css">
-    <style type="text/css">
-      @font-face {
-        font-family:"Lato";
-        src: url("/fonts/roboto.ttf") /* TTF file for CSS3 browsers */
-      }
-    </style>
-    <script src="/scripts/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/scripts/angular.min.js"></script>
-    <script src="/scripts/app.js"></script>
-    <script>
-      $('.dropdown').on('click', function(e){
-         $(this).toggleClass('open');
-         e.stopPropagation();
-        });
-
-    /* Upon a mouseup event, if the clicked element is not dropdown,
-    then remove the open class to close the dropdown menu */
-        $(document).on('mouseup', function(e){
-          var eleNotFound = false;
-          if($(e.target).attr("class") !== "dropdown")
-          {
-                eleNotFound = true;
-               $(".dropdown-menu").each(function(){
-                 $(this).parent().removeClass('open');
-               });
-          }
-           if(eleNotFound)
-             e.preventDefault();
-        });
-    </script>
+    <title> My UI Framework </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/syntax-highlight/school-book.css">
   </head>
 
   <body>
@@ -55,7 +24,7 @@
         <li> <a href="#" ng-click="component ='dropdown'">Dropdown</a></li>
         <li> <a href="#" ng-click="component ='input'">Input</a></li>
         <li> <a href="#" ng-click="component ='navbar'">Navbar</a></li>
-        <li> <a href="#" ng-click="component ='tabs'"> </a>Tabs</li>
+        <li> <a href="#" ng-click="component ='tabs'">Tabs</a></li>
         <li> <a href="#" ng-click="component ='table'">Table</a></li>
       </ul>
     </div>
@@ -81,9 +50,7 @@
 
     <!-- Main -->
      <div class="main" ng-switch on="component">
-       <ng-include src="'/views/default.html'"></ng-include>
        <div ng-switch-when="avatar" >
-         <ng-hide src="'/views/default.html'"></ng-hide>
          <ng-include src="'/views/avatar.html'"></ng-include>
        </div>
        <div ng-switch-when="badges" >
@@ -104,41 +71,33 @@
        <div ng-switch-when="input">
          <ng-include src="'/views/input.html'"></ng-include>
        </div>
-       <div ng-switch-when="tab">
+       <div ng-switch-when="navbar">
+         <ng-include src="'/views/navbar.html'"></ng-include>
+       </div>
+       <div ng-switch-when="tabs">
          <ng-include src="'/views/tabs.html'"></ng-include>
        </div>
        <div ng-switch-when="table">
          <ng-include src="'/views/table.html'"></ng-include>
        </div>
        <div ng-switch-default>
-         <ng-include src="'/views/index.html'"></ng-include>
+         <br />
+         <div class="banner">
+  				<h1>Name</h1>
+  				<p>A modern front-end development framework</p>
+  				<button class="button button-green"> Get Started</button>
+  			</div>
        </div>
     </div> <!-- end of Main -->
-
     <!-- Footer -->
     <div class="footer">
       <p> Copyright © 2017-present </p>
     </div>
   </div> <!-- end of Grid -->
-  <script>
-    $('.dropdown').on('click', function(e){
-       $(this).toggleClass('open');
-       e.stopPropagation();
-      });
-
-  /* Upon a mouseup event, if the clicked element is not dropdown,
-  then remove the open class to close the dropdown menu */
-      $(document).on('mouseup', function(e){
-        var eleNotFound = false;
-        if($(e.target).attr("class") !== "dropdown")
-        {
-              eleNotFound = true;
-             $(".dropdown-menu").each(function(){
-               $(this).parent().removeClass('open');
-             });
-        }
-         if(eleNotFound)
-           e.preventDefault();
-      });
-  </script>
+  <!-- Load javascript when all files are loaded. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/scripts/angular.min.js"></script>
+  <script src="/scripts/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="/scripts/app.js"></script>
 </html>

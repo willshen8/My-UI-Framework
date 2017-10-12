@@ -13,7 +13,7 @@
 			<p> I love front-end development. </p>
 			<button class="button button-green"> More </button>
 		</div>
-		<pre class="line-numbers"><code class="language-css">
+		<pre class="line-numbers"><code class="html">
 			&lt;div class="banner"&gt;
 				&lt;h1&gt;Hello, World!&lt;/h1&gt;
 				&lt;p&gt;I love front-end development. &lt;/p&gt;
@@ -23,3 +23,9 @@
 	</div>
 	<div class="code"> </div>
 </section>
+
+<script>
+$(document).ready(function() {
+   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>

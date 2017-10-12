@@ -92,10 +92,13 @@ ul, li {
     transition: all 0.3s ease-out;
 }
 
+.dropdown .dropdown-menu ul{
+  display: block;
+}
+
 .dropdown .dropdown-menu li {
 	list-style: none;
 	text-align: left;
-	padding: 10px;
 	width: inherit;
 	border-bottom: 1px solid #e6e8ea;
 }
@@ -113,6 +116,7 @@ ul, li {
 .dropdown .dropdown-menu li a {
   display: block;
   width: inherit;
+  padding: 15px;
 	color: #000;
 	text-decoration: none;
 }

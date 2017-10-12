@@ -1,33 +1,75 @@
-<h2> Table </h2>
-<table class="table">
-  <thead>
-    <tr>
-      <th width="200  ">Table Header</th>
-      <th>Table Header</th>
-      <th width="150">Table Header</th>
-      <th width="150">Table Header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Content Goes Here</td>
-      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-    <tr>
-      <td>Content Goes Here</td>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td>Content Goes Here</td>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-  </tfoot>
-</table>
+<section class="component">
+  <div class="title"> Table </div>
+  <div class="explanation">
+    <p> Table is very useful to display data in a structured format to allow
+      users to scan, analyse, filter, sort and maninuplate data.
+      </p>
+  </div>
+  <div class="example">
+    <div class="heading"> Striped Table</div>
+      <p> Striped table rows provides clarity and make it easy to read
+      between rows of data.</p>
+    <table class="table striped blue-header">
+      <thead>
+        <tr>
+          <th>Table Header</th>
+          <th>Table Header</th>
+          <th>Table Header</th>
+          <th>Table Header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Content Goes Here</td>
+          <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+        <tr>
+          <td>Content Goes Here</td>
+          <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Content Goes Here</td>
+          <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+      </tfoot>
+    </table>
+    <p> The code snippet below provides a basic strucutre to table, and convert
+    it to striped table is as simple as listing the css class. </p>
+    <pre class="line-numbers"><code class="html">
+       &lt;table class="table striped blue-header"&gt;
+         &lt;thead&gt;
+           &lt;tr&gt;
+             &lt;th&gt;Table Header&lt;/th&gt;
+           &lt;/tr&gt;
+         &lt;/thead&gt;
+         &lt;tbody&gt;
+           &lt;tr&gt;
+             &lt;td&gt;Content Goes Here&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+             &lt;td&gt;Content Goes Here&lt;/td&gt;
+           &lt;/tr&gt;
+         &lt;/tbody&gt;
+         &lt;tfoot&gt;
+           &lt;tr&gt;
+             &lt;td&gt;Content Goes Here&lt;/td&gt;
+           &lt;/tr&gt;
+         &lt;/tfoot&gt;
+       &lt;/table&gt;
+    </code></pre>
+  </div>
+  <div class="code"> </div>
+</section>
+<script>
+$(document).ready(function() {
+   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>

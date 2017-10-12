@@ -1,14 +1,51 @@
-  <h2> Tabs </h2>
-  <div class="tabs">
-
-    <div class="tab-item active">
-      <h3> Tab A </h3>
-    </div>
-    <div class="tab-item">
-      <h3> Tab B </h3>
-    </div>
-    <div class="tab-item">
-      <h3> Tab C </h3>
-    </div>
-
+<section class="component">
+  <div class="title"> Tabs </div>
+  <div class="explanation">
+    <p> Tabs are perfect to display lots of information in the same area
+    or page to reduce clutter. In the example below, the 'Home' tab
+      is shown as the active tab. Please note that Javascript has not been
+      implemented to toggle the tabs.
+    </p>
   </div>
+  <div class="example">
+    <div class="tabs">
+      <div class="tab-item active">
+        <div class="icon">
+          <i class="fa fa-2x fa-home" aria-hidden="true"></i>
+        </div>
+        <div class="title">Home</div>
+      </div>
+      <div class="tab-item">
+        <div class="icon">
+          <i class="fa fa-2x fa-folder" aria-hidden="true"></i>
+        </div>
+        <div class="title">Portfolio</div>
+      </div>
+      <div class="tab-item">
+        <div class="icon">
+          <i class="fa fa-2x fa-phone" aria-hidden="true"></i>
+        </div>
+        <div class="title">Contact</div>
+      </div>
+    </div><!--end of tabs -->
+
+    <pre class="line-numbers"><code class="language-html">
+       &lt;div class="tabs"&gt;
+         &lt;div class="tab-item active"&gt;
+          &lt;div class="icon"&gt;
+          &lt;/div&gt;
+           &lt;div class="title"> Home &lt;/div&gt;
+         &lt;div class="tab-item"&gt;
+         &lt;/div&gt;
+         &lt;div class="tab-item"&gt;
+         &lt;/div&gt;
+       &lt;/div&gt;
+    </code></pre>
+  </div> <!-- end of example div -->
+  <div class="code"> </div>
+</section>
+<script>
+$(document).ready(function() {
+   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>

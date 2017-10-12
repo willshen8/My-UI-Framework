@@ -1,7 +1,13 @@
-      <div class="header-title"> Navbar - Left hand side logo</div>
-      <p class="caption">
-        Navigation bar or Navbar is commonly used at the top or side of the page to direct users to other sections of the site.
-      </p>
+<section class="component">
+  <div class="title"> Navbars</div>
+  <div class="explanation">
+    <p>   Navigation bar or Navbar is commonly used at the top or side of the
+      page to direct users to other sections of the site. </p>
+  </div>
+  <div class="example">
+    <div class="heading">  Navbar - Left hand side logo</div>
+      <p> This navbar has the logo on the left hand side.</p>
+
       <div class="navbar">
         <div class="logo">
           <p> Logo </p>
@@ -16,10 +22,28 @@
         </div> <!--end of nav-menu -->
       </div> <!-- end of navbar -->
 
-      <div class="header-title"> Navbar - Right hand side logo</div>
-      <p class="caption">
-        Swap the logo to the right hand side is as simple as reverse the order of the html element.
-      </p>              
+  <div class="code">
+    <pre class="line-numbers"><code class="language-html">
+       &lt;div class="navbar"&gt;
+         &lt;div class="logo"&gt;
+           &lt;p> Logo &lt;/p&gt;
+         &lt;/div&gt;
+         &lt;div class="nav-menu"&gt;
+           &lt;ul&gt;
+             &lt;li&gt;&lt;a href="#home">Home&lt;/a&gt;&lt;/li&gt;
+             &lt;li&gt;&lt;a href="#news">News&lt;/a&gt;&lt;/li&gt;
+             &lt;li&gt;&lt;a href="#contact">Contact&lt;/a>&lt;/li&gt;
+             &lt;li&gt;&lt;a href="#about">About&lt;/a&gt;&lt;/li&gt;
+           &lt;/ul&gt;
+         &lt;/div&gt;
+       <&lt;div&gt;
+    </code></pre>
+  </div>
+
+  <div class="heading"> Navbar - Right hand side logo</div>
+    <p> This navbar has the logo on the right hand side, this is simply just
+      a reordering of the html elements.</p>
+
       <div class="navbar">
         <div class="nav-menu">
           <ul>
@@ -33,3 +57,28 @@
           <p> Logo </p>
         </div>
       </div>
+
+      <div class="code">
+        <pre class="line-numbers"><code class="language-html">
+           &lt;div class="navbar"&gt;
+             &lt;div class="nav-menu"&gt;
+               &lt;ul&gt;
+                 &lt;li&gt;&lt;a href="#home">Home&lt;/a&gt;&lt;/li&gt;
+                 &lt;li&gt;&lt;a href="#news">News&lt;/a&gt;&lt;/li&gt;
+                 &lt;li&gt;&lt;a href="#contact">Contact&lt;/a>&lt;/li&gt;
+                 &lt;li&gt;&lt;a href="#about">About&lt;/a&gt;&lt;/li&gt;
+               &lt;/ul&gt;
+             &lt;/div&gt;
+             &lt;div class="logo"&gt;
+               &lt;p> Logo &lt;/p&gt;
+             &lt;/div&gt;
+           <&lt;div&gt;
+        </code></pre>
+      </div
+</div>
+</section>
+<script>
+$(document).ready(function() {
+   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>
