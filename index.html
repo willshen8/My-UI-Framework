@@ -12,29 +12,35 @@
 
   <body>
   <div class="grid-container">
-    <div class="sidebar">
-      <div class="brand"> Logo</div>
-      <h2 class="text-center"> Component </h2>
-      <ul ng-model="component">
-        <li> <a href="#" ng-click="component ='avatar'">Avatar</a></li>
-        <li> <a href="#" ng-click="component ='buttons'">Buttons</a></li>
-        <li> <a href="#" ng-click="component ='badges'">Badges</a></li>
-        <li> <a href="#" ng-click="component ='banner'">Banner</a></li>
-        <li> <a href="#" ng-click="component ='cards'">Cards</a></li>
-        <li> <a href="#" ng-click="component ='dropdown'">Dropdown</a></li>
-        <li> <a href="#" ng-click="component ='input'">Input</a></li>
-        <li> <a href="#" ng-click="component ='navbar'">Navbar</a></li>
-        <li> <a href="#" ng-click="component ='tabs'">Tabs</a></li>
-        <li> <a href="#" ng-click="component ='table'">Table</a></li>
-      </ul>
-    </div>
-
     <!-- Header -->
     <div class="header">
+      <div class="brand text-center"> Logo </div>
+        <nav role="navigation">
+          <div class="sideMenu">
+            <input type="checkbox">
+              <span></span>
+              <span></span>
+              <span></span>
+            <h2> Components </h2>
+            <ul id="menu" ng-model="component">
+              <li> <a href="#" ng-click="component ='avatar'">Avatar</a></li>
+              <li> <a href="#" ng-click="component ='buttons'">Buttons</a></li>
+              <li> <a href="#" ng-click="component ='badges'">Badges</a></li>
+              <li> <a href="#" ng-click="component ='banner'">Banner</a></li>
+              <li> <a href="#" ng-click="component ='cards'">Cards</a></li>
+              <li> <a href="#" ng-click="component ='dropdown'">Dropdown</a></li>
+              <li> <a href="#" ng-click="component ='input'">Input</a></li>
+              <li> <a href="#" ng-click="component ='navbar'">Navbar</a></li>
+              <li> <a href="#" ng-click="component ='preloader'">Preloader</a></li>
+              <li> <a href="#" ng-click="component ='tabs'">Tabs</a></li>
+              <li> <a href="#" ng-click="component ='table'">Table</a></li>
+            </ul>
+          </div>
+        </nav>
       <div class="nav">
           <ul>
             <li> <a href="#">About</a> </li>
-            <li> <a href="#">Getting Started</a></li>
+            <li> <a href="#">Get Started</a></li>
             <li> <a href="#">UI Components</a> </li>
         </ul>
       </div>
@@ -44,9 +50,32 @@
           <i><span class="fa fa-search"> </span></i>
         </div>
       </div>
-      <div class="user"><a href="#"><i class="fa fa-user fa-lg"
-        aria-hidden="true"></i></a></div>
     </div> <!-- End of header -->
+
+    <div class="sidebar">
+      <nav role="navigation">
+        <div class="sideMenu">
+          <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+          <h2> Components </h2>
+          <ul id="menu" ng-model="component">
+            <li> <a href="#" ng-click="component ='avatar'">Avatar</a></li>
+            <li> <a href="#" ng-click="component ='buttons'">Buttons</a></li>
+            <li> <a href="#" ng-click="component ='badges'">Badges</a></li>
+            <li> <a href="#" ng-click="component ='banner'">Banner</a></li>
+            <li> <a href="#" ng-click="component ='cards'">Cards</a></li>
+            <li> <a href="#" ng-click="component ='dropdown'">Dropdown</a></li>
+            <li> <a href="#" ng-click="component ='input'">Input</a></li>
+            <li> <a href="#" ng-click="component ='navbar'">Navbar</a></li>
+            <li> <a href="#" ng-click="component ='preloader'">Preloader</a></li>
+            <li> <a href="#" ng-click="component ='tabs'">Tabs</a></li>
+            <li> <a href="#" ng-click="component ='table'">Table</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     <!-- Main -->
      <div class="main" ng-switch on="component">
@@ -74,6 +103,9 @@
        <div ng-switch-when="navbar">
          <ng-include src="'/views/navbar.html'"></ng-include>
        </div>
+       <div ng-switch-when="preloader">
+         <ng-include src="'/views/preloader.html'"></ng-include>
+       </div>
        <div ng-switch-when="tabs">
          <ng-include src="'/views/tabs.html'"></ng-include>
        </div>
@@ -81,12 +113,39 @@
          <ng-include src="'/views/table.html'"></ng-include>
        </div>
        <div ng-switch-default>
+         <!-- Default html to be loaded in main -->
          <br />
-         <div class="banner">
-  				<h1>Name</h1>
-  				<p>A modern front-end development framework</p>
-  				<button class="button button-green"> Get Started</button>
-  			</div>
+
+         <div class="hero">
+    				<h1>Jumpstart</h1>
+    				<p>A modern front-end development framework</p>
+        </div>
+
+        <div class="row">
+          <div class="prom-block">
+            <div class="icon text-center">
+              <i class="fa fa-4x fa-mobile purple-color" aria-hidden="true"></i>
+            </div>
+            <h5 class="text-center">Fully Responsive</h5>
+            <p> This framework is responsive on desktop, mobile and tablet.</p>
+          </div>
+          <div class="prom-block">
+            <div class="icon text-center purple-color">
+              <i class="fa fa-4x fa-users" aria-hidden="true"></i>
+            </div>
+            <h5 class="text-center">UI Focused</h5>
+            <p> The UI components focuses on user experience first.</p>
+          </div>
+
+          <div class="prom-block">
+            <div class="icon text-center">
+              <i class="fa fa-4x fa-bolt purple-color" aria-hidden="true"></i>
+            </div>
+            <h5 class="text-center">Easy to work with</h5>
+            <p> We have templates and documentation on eveything.</p>
+          </div>
+        </div>
+
        </div>
     </div> <!-- end of Main -->
     <!-- Footer -->
@@ -100,4 +159,5 @@
   <script src="/scripts/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script src="/scripts/app.js"></script>
+  <script src="/scripts/dropdown.js"></script>
 </html>

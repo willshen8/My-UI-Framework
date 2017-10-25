@@ -28,6 +28,11 @@ th {
   font-size: 1.2rem;
 }
 
+.table.border > thead > tr > th {
+  font-weight: 500;
+  border: 1px solid rgba(34,36,38,.1);
+}
+
 .table > tfoot > tr > td {
   vertical-align: bottom;
 }
@@ -35,7 +40,7 @@ th {
 /* Implementation of different styles */
 
 /* Striped gives alternate rows different colors*/
-.striped tr:nth-child(odd){
+.striped tr:nth-child(even){
   background-color: #f2f2f2;
 }
 
@@ -45,6 +50,8 @@ th {
 
 .normal-header th{
   color: #000;
+  font-weight: 600;
+  background-color: #f2f2f2;
   border-bottom: 1px solid #ddd;
 }
 
@@ -60,6 +67,6 @@ th {
     background: #4CAF50;
 }
 
-.bordered {
-
+.border th, td, tr{
+  border: 1px solid rgba(34,36,38,.1)
 }
